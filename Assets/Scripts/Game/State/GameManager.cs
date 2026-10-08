@@ -18,14 +18,25 @@ namespace Game.State
         
         public void InitBase()
         {
+            InterfaceManagerMain.Instance.RegisterInterfaceInstance<GameManager>(this);
+            
+            
+            levelDataHandler = BaseInterfaceManager.Instance.GetInterfaceInstance<ILevelDataHandler>();
+            gridCreator = BaseInterfaceManager.Instance.GetInterfaceInstance<IGridCreator>();
+            gearHandler = BaseInterfaceManager.Instance.GetInterfaceInstance<IGearHandler>();
             OnGameStateChanged(GameState.GameStart);
         }
         
         public void InitDataAndDependencies()
         {
-            levelDataHandler = BaseInterfaceManager.Instance.GetInterfaceInstance<ILevelDataHandler>();
-            gridCreator = BaseInterfaceManager.Instance.GetInterfaceInstance<IGridCreator>();
-            gearHandler = BaseInterfaceManager.Instance.GetInterfaceInstance<IGearHandler>();
+            // levelDataHandler = BaseInterfaceManager.Instance.GetInterfaceInstance<ILevelDataHandler>();
+            // gridCreator = BaseInterfaceManager.Instance.GetInterfaceInstance<IGridCreator>();
+            // gearHandler = BaseInterfaceManager.Instance.GetInterfaceInstance<IGearHandler>();
+            //
+            // Debug.Log($"InitDataAndDependencies called: " +
+            //           $"levelDataHandler: {levelDataHandler}, " +
+            //           $"gridCreator: {gridCreator}, " +
+            //           $"gearHandler: {gearHandler}");
         }
         
         public void OnGameStateChanged(GameState newState)

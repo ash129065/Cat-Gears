@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -17,6 +18,12 @@ namespace Game.Data.Level.SOClasses
         [SerializeField] private GearSpriteData[] spriteDatas;
         
         private readonly Dictionary<string, Sprite> gearSprites = new Dictionary<string, Sprite>();
+
+        private void OnEnable()
+        {
+            // TODO :: Refactor this
+            InitSpriteData();
+        }
 
         public void InitSpriteData()
         {

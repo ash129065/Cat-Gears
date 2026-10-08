@@ -361,8 +361,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadOnStart: 1
-  baseManagers: []
-  scriptableObjects: []
+  baseManagers:
+  - {fileID: 673316131}
+  - {fileID: 1837030056}
+  - {fileID: 2066237224}
+  - {fileID: 41565618}
+  scriptableObjects:
+  - {fileID: 11400000, guid: b370e9765d6dd48b9aad8cff7c1d7907, type: 2}
 --- !u!1 &466292807
 GameObject:
   m_ObjectHideFlags: 0

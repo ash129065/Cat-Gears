@@ -30,6 +30,7 @@ namespace Game.Core.Managers
         
         public void InitBase()
         {
+            InterfaceManagerMain.Instance.RegisterInterfaceInstance<GridManager>(this);
             BaseInterfaceManager.Instance.RegisterInterfaceInstance<IGridCreator>(this);
         }
         
@@ -46,8 +47,12 @@ namespace Game.Core.Managers
             int rowIdx = -1, colIdx = -1;
             int totalRows = levelConfig.Rows, totalCols = levelConfig.Cols;
             string posString;
+            foreach (var data in levelConfig.Board)
+                Debug.Log($"data: {data}");
+
+            Debug.Log($"CreateGrid: {levelConfig.Id}, {levelConfig.Rows}, {levelConfig.Cols}");
             
-            for (int row = totalRows - 1; row >= 0; row++)
+            for (int row = 0; row < totalRows; row++)
             {
                 rowIdx++;
                 colIdx = -1;
@@ -72,6 +77,8 @@ namespace Game.Core.Managers
                     gearView.Init(posString, GetSprite(boardRow[col]));
                     
                     gearHandler.AddGearData(gearModel);
+                    
+                    Debug.Log($"PosString: {posString}");
                 }
             }
         }

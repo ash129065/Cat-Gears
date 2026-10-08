@@ -20,6 +20,7 @@ namespace Game.Level
 
         public void InitBase()
         {
+            InterfaceManagerMain.Instance.RegisterInterfaceInstance<LevelManager>(this);
             BaseInterfaceManager.Instance.RegisterInterfaceInstance<ILevelDataHandler>(this);
         }
 

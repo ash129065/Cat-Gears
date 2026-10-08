@@ -16,32 +16,32 @@ MonoBehaviour:
   - gearType: emptyGear
     sprite: {fileID: 4704680488331250670, guid: ec49d352886c249208f2fcc9fb14e4b6, type: 3}
   - gearType: hole
-    sprite: {fileID: -7897094408390003924, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: -1311278208018227403, guid: 6fcefabf93e574ab896d2b93869ed303, type: 3}
   - gearType: goldenGear
-    sprite: {fileID: -6850411146228326993, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: 9118850620813342723, guid: 4c3279afc057e45c98876aa8ba3f93de, type: 3}
   - gearType: largerGear
-    sprite: {fileID: -6818297054768129606, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: -2483955897002547636, guid: 998f54a2ba0774a67b14f5a441489c08, type: 3}
   - gearType: idleGear
-    sprite: {fileID: -4114548165154364619, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: 6383087150580274251, guid: e6269b57da4f7439dab76efddd5f7cf9, type: 3}
   - gearType: jammedGear
-    sprite: {fileID: 7032290244179283053, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: 5775923165306024352, guid: 90b1a7bda2e7b4e1aa839b62a3cfc85e, type: 3}
   - gearType: affordablePriceGear
-    sprite: {fileID: 5791407998716591707, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: 7046289117308468026, guid: 77aa96df8f5bc41aa9efa28832fa7469, type: 3}
   - gearType: unaffordablePriceGear
-    sprite: {fileID: 1403650871899664872, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: 5145590403896195785, guid: 9b48cf6b0e8504773a35e974a3a9d957, type: 3}
   - gearType: bigPriceAffordableGear
-    sprite: {fileID: -8299607646884365044, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: 7046289117308468026, guid: 77aa96df8f5bc41aa9efa28832fa7469, type: 3}
   - gearType: bigPriceGear
-    sprite: {fileID: 8194567264622533948, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: 5145590403896195785, guid: 9b48cf6b0e8504773a35e974a3a9d957, type: 3}
   - gearType: frozenGear
-    sprite: {fileID: -7491644261119411060, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: -8457871363223698862, guid: 4405fd03f286346baab332acc5b55656, type: 3}
   - gearType: frozenBigGear
-    sprite: {fileID: 2017200787483726713, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: -759042680443189303, guid: c571bbb1c664c42718d0251b7ae5ae0d, type: 3}
   - gearType: coinGear
-    sprite: {fileID: -5556925540563660028, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: 7458616597889342786, guid: 740b4346697424c4e9c1d22b4c24a410, type: 3}
   - gearType: brokenGear
-    sprite: {fileID: 1605581506895932462, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: -7510173762607653383, guid: 15a450daa9aed4455a1474e398ed907d, type: 3}
   - gearType: rustyGear
-    sprite: {fileID: 7650997097912153045, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: -1137093048556278003, guid: 8b68878ad75eb4609968bfb6409c9573, type: 3}
   - gearType: emptyGround
-    sprite: {fileID: 3725246513637459568, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+    sprite: {fileID: 4409747029777670058, guid: 4354196ee05a34003b7eca003561d513, type: 3}

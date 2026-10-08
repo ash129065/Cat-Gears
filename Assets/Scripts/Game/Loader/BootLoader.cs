@@ -1,3 +1,4 @@
+using Game.Abstraction;
 using Game.Data.Base;
 using Game.Interface;
 using UnityEngine;
@@ -20,6 +21,7 @@ namespace Game.Loader
         
         public void Load()
         {
+            BaseInterfaceManager.InitMainInstance();
             InterfaceManagerMain.InitMainInstance();
             
             InitializeScriptables();

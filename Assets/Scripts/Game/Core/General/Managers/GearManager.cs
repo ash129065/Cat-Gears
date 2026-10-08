@@ -13,12 +13,14 @@ namespace Game.Core.Managers
         void RemoveGearData(string gearId);
     }
     
-    public class GearManager : MonoBehaviour, IGearHandler
+    public class GearManager : MonoBehaviour, IBase, IGearHandler
     {
         public GearDataModel GearDataModel { get; private set; }
 
         public void InitBase()
         {
+            InterfaceManagerMain.Instance.RegisterInterfaceInstance<GearManager>(this);
+            
             GearDataModel = new GearDataModel();
             
             BaseInterfaceManager.Instance.RegisterInterfaceInstance<IGearHandler>(this);
