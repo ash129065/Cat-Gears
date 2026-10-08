@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1afc0b11b1194375bcdcd68e8287fa5, type: 3}
-  m_Name: CatTableAsset
+  m_Script: {fileID: 11500000, guid: 80f1b0653a7b3457e88b5a575df25890, type: 3}
+  m_Name: LevelDataCollectionSo
   m_EditorClassIdentifier: 
+  levelDataList:
+  - {fileID: 11400000, guid: 799d0add2a5124f1da359832f33024cd, type: 2}

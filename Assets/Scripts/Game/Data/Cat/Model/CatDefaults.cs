@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CatGears.Levels;
+using Game.Data.Base;
+using Game.Utils;
+using Game.Data.Level;
 using UnityEngine;
 
 namespace Game.Data.Cat.Model
@@ -9,7 +11,7 @@ namespace Game.Data.Cat.Model
     [Serializable]
     public class CatDefaults : IDefaultsData
     {
-        public const string ResourceName = "cat-defaults";
+        public const string ResourceName = "Json/cat-defaults";
 
         public float EngineTurn;      // s per turn of a 10-tooth gear at x1
         public CatDef[] Cats;

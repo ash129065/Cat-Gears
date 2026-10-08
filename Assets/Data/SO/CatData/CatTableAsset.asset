@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1afc0b11b1194375bcdcd68e8287fa5, type: 3}
+  m_Name: CatTableAsset
+  m_EditorClassIdentifier: 
+  defaultsJson: {fileID: 0}
+  engineTurn: 3.2
+  catDefinitions:
+  - Type: 0
+    Size: 0
+    Teeth: 10
+    UnlockLevel: 1
+    Hp: 80
+    Damage: 22
+    Reach: 18
+    Cooldown: 1
+    MoveSpeed: 66
+    Ranged: 0
+    Ability: 0
+    PierceCount: 0
+    PierceRange: 0
+    SlowFactor: 0
+    SlowDuration: 0
+    FirstHitMultiplier: 0
+    SplashRadius: 0
+  - Type: 1
+    Size: 0
+    Teeth: 10
+    UnlockLevel: 1
+    Hp: 46
+    Damage: 9
+    Reach: 26
+    Cooldown: 0.9
+    MoveSpeed: 78
+    Ranged: 0
+    Ability: 1
+    PierceCount: 2
+    PierceRange: 30
+    SlowFactor: 0
+    SlowDuration: 0
+    FirstHitMultiplier: 0
+    SplashRadius: 0
+  - Type: 2
+    Size: 0
+    Teeth: 10
+    UnlockLevel: 2
+    Hp: 30
+    Damage: 6
+    Reach: 80
+    Cooldown: 0.75
+    MoveSpeed: 70
+    Ranged: 1
+    Ability: 0
+    PierceCount: 0
+    PierceRange: 0
+    SlowFactor: 0
+    SlowDuration: 0
+    FirstHitMultiplier: 0
+    SplashRadius: 0
+  - Type: 3
+    Size: 0
+    Teeth: 10
+    UnlockLevel: 7
+    Hp: 34
+    Damage: 4
+    Reach: 70
+    Cooldown: 0.8
+    MoveSpeed: 68
+    Ranged: 1
+    Ability: 2
+    PierceCount: 0
+    PierceRange: 0
+    SlowFactor: 0.45
+    SlowDuration: 1.8
+    FirstHitMultiplier: 0
+    SplashRadius: 0
+  - Type: 4
+    Size: 1
+    Teeth: 20
+    UnlockLevel: 4
+    Hp: 170
+    Damage: 30
+    Reach: 22
+    Cooldown: 0.8
+    MoveSpeed: 110
+    Ranged: 0
+    Ability: 3
+    PierceCount: 0
+    PierceRange: 0
+    SlowFactor: 0
+    SlowDuration: 0
+    FirstHitMultiplier: 2
+    SplashRadius: 0
+  - Type: 5
+    Size: 1
+    Teeth: 20
+    UnlockLevel: 10
+    Hp: 60
+    Damage: 34
+    Reach: 90
+    Cooldown: 2
+    MoveSpeed: 60
+    Ranged: 1
+    Ability: 4
+    PierceCount: 0
+    PierceRange: 0
+    SlowFactor: 0
+    SlowDuration: 0
+    FirstHitMultiplier: 0
+    SplashRadius: 46

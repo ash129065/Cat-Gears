@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67caf8db5bef432288cf1ccdcdf661b, type: 3}
+  m_Name: LevelData1
+  m_EditorClassIdentifier: 
+  levelConfig:
+    <UseDefaultWaves>k__BackingField: 0
+    <Id>k__BackingField: 0
+    <Area>k__BackingField: 0
+    <SlotOrder>k__BackingField: 0
+    <Origin>k__BackingField: 0
+    <Board>k__BackingField: []
+    <Engines>k__BackingField: []
+    <Frozen>k__BackingField: []
+    <Special>k__BackingField: []
+    <Roads>k__BackingField: []
+    <CatPool>k__BackingField: 
+    <StartCoins>k__BackingField: 0
+    <StartPrice>k__BackingField: 0
+    <CastleHp>k__BackingField: 0
+    <Waves>k__BackingField: []
+    <Difficulty>k__BackingField: 0
+    <UnlockableCats>k__BackingField: 

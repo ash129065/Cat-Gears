@@ -3,7 +3,7 @@
 
 using System;
 using UnityEngine;
-using CatGears.Levels;
+using Game.Utils;
 using System.Collections.Generic;
 
 namespace Game.Data.Cat.Model
@@ -11,7 +11,7 @@ namespace Game.Data.Cat.Model
     [Serializable]
     public class BalanceDefaults : IDefaultsData
     {
-        public const string ResourceName = "balance-defaults";
+        public const string ResourceName = "Json/balance-defaults";
 
         public int CastleHp;
         public int WavesPerLevel;

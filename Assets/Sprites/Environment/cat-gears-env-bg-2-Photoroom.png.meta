@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -129,13 +129,13 @@ TextureImporter:
       name: cat-gears-env-bg-2-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 156
-        width: 926
-        height: 1131
+        x: 51
+        y: 155
+        width: 924
+        height: 1141
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 155, y: 204, z: 145, w: 181}
       customData: 
       outline: []
       physicsShape: []

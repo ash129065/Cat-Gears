@@ -1,0 +1,1 @@
+[{"Id":1,"Area":0,"SlotOrder":0,"Origin":0,"Board":["....","..#.","IG..","....","...."],"Engines":[],"Frozen":[],"Special":[],"Roads":[{"pointOffsetRelativeToBoard":[{"x":4.5,"y":-1},{"x":-1,"y":-1},{"x":-1,"y":5},{"x":4.5,"y":5}]}],"CatPool":[0,1],"StartCoins":3,"StartPrice":1,"CastleHp":2000,"UseDefaultWaves":true,"Waves":[],"Difficulty":1,"Unlock":null}]

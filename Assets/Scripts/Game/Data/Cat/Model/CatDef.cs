@@ -4,7 +4,9 @@
 
 using System;
 using System.Collections.Generic;
-using CatGears.Levels;
+using Game.Data.Base;
+using Game.Utils;
+using Game.Data.Level;
 using UnityEngine;
 
 namespace Game.Data.Cat.Model

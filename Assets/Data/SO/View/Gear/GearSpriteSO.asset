@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d81d874087e4274988995d71b3a461, type: 3}
+  m_Name: GearSpriteSO
+  m_EditorClassIdentifier: 
+  spriteDatas:
+  - gearType: emptyGear
+    sprite: {fileID: 4704680488331250670, guid: ec49d352886c249208f2fcc9fb14e4b6, type: 3}
+  - gearType: hole
+    sprite: {fileID: -7897094408390003924, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: goldenGear
+    sprite: {fileID: -6850411146228326993, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: largerGear
+    sprite: {fileID: -6818297054768129606, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: idleGear
+    sprite: {fileID: -4114548165154364619, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: jammedGear
+    sprite: {fileID: 7032290244179283053, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: affordablePriceGear
+    sprite: {fileID: 5791407998716591707, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: unaffordablePriceGear
+    sprite: {fileID: 1403650871899664872, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: bigPriceAffordableGear
+    sprite: {fileID: -8299607646884365044, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: bigPriceGear
+    sprite: {fileID: 8194567264622533948, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: frozenGear
+    sprite: {fileID: -7491644261119411060, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: frozenBigGear
+    sprite: {fileID: 2017200787483726713, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: coinGear
+    sprite: {fileID: -5556925540563660028, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: brokenGear
+    sprite: {fileID: 1605581506895932462, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: rustyGear
+    sprite: {fileID: 7650997097912153045, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}
+  - gearType: emptyGround
+    sprite: {fileID: 3725246513637459568, guid: 37a1a2b0525234957a649e0b612d9147, type: 3}

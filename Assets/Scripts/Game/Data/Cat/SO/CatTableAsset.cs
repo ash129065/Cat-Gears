@@ -8,7 +8,9 @@
 
 using System;
 using System.Collections.Generic;
+using Game.Data.Base;
 using Game.Data.Cat.Model;
+using Game.Data.Level;
 using UnityEngine;
 
 namespace Game.Data.Cat.SO

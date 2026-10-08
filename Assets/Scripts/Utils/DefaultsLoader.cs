@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using UnityEngine;
 
-namespace CatGears.Levels
+namespace Game.Utils
 {
     public interface IDefaultsData
     {
@@ -27,7 +27,7 @@ namespace CatGears.Levels
         {
             var asset = Resources.Load<TextAsset>(resourceName);
             if (asset == null)
-                throw new FileNotFoundException($"Missing Assets/Resources/{resourceName}.json.");
+                throw new FileNotFoundException($"Missing Assets/Resources/Json/{resourceName}.json.");
             return Parse<T>(asset.text, resourceName);
         }
 

@@ -1,19 +1,36 @@
+using Game.Abstraction;
+using Game.Data.Level;
+using Game.Data.Level.Abstraction;
+using Game.Interface;
 using UnityEngine;
 
 namespace Game.Level
 {
-    public class LevelManager : MonoBehaviour
+    public interface IInterfaceBase {}
+    
+    public interface ILevelDataHandler : IInterfaceBase
     {
-        
+        ILevelConfig GetLevelConfig();
+    }
     
-        private void Start()
+    public class LevelManager : MonoBehaviour, IBase, IDataLoader, ILevelDataHandler
+    {
+        [SerializeField] private LevelDataCollectionSo levelDataCollectionSo;
+
+
+        public void InitBase()
         {
-        
+            BaseInterfaceManager.Instance.RegisterInterfaceInstance<ILevelDataHandler>(this);
         }
-    
-        private void Update()
+
+        public void InitDataAndDependencies()
         {
-        
+            throw new System.NotImplementedException();
+        }
+
+        public ILevelConfig GetLevelConfig()
+        {
+            return levelDataCollectionSo.GetLevelConfig(1);
         }
     }
 }
