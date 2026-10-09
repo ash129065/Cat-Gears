@@ -30,12 +30,4 @@ namespace Game.Data.General
         public SpecialType Type;
         public int Repair;      // broken gears only; -1 = default (2 x current small price)
     }
-
-    // TODO :: (1) 
-    [Serializable]
-    public struct PricedDef
-    {
-        public Slot Slot;
-        public int Price;
-    }
 }

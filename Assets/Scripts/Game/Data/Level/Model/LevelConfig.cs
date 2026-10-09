@@ -1,4 +1,5 @@
 using System;
+using Game.Core.Economy.Shop;
 using Game.Data.Base;
 using Game.Data.General;
 using Game.Data.Level.Abstraction;
@@ -43,58 +44,52 @@ namespace Game.Data.Level
     }
 
     [Serializable]
-    public struct LevelConfig : ILevelConfig
+    public class LevelConfig : ILevelConfig
     {
         public const int DefaultCastleHp = 2000;
         public const int WavesPerLevel = 5;
+        public const int LoopRoadMaxCols = 6;     // up to 6 cols: loop road; 7-9: top-and-bottom road
+        public const float DifficultyStep = 0.08f;
 
-        // TODO :: (1)
-        public const int LoopRoadMaxCols = 6;
+        // ---- JSON props ----
+        [JsonProperty] [field: SerializeField] public int Id { get; private set; }
+        [JsonProperty] [field: SerializeField] public Area Area { get; private set; }
 
-        #region JSON PROPS
+        [JsonProperty] [field: SerializeField] public SlotOrder SlotOrder { get; private set; }
+        [JsonProperty] [field: SerializeField] public Origin Origin { get; private set; }
 
-        [JsonIgnore] [field: SerializeField] public bool UseDefaultWaves { get; set; } // JSON "waves": "default"
+// One string per row, first string = top row.
+// '.' empty, '#' hole, 'G' golden gear, 'I' frozen anchor.
+        [JsonProperty] [field: SerializeField] public string[] Board { get; private set; }
 
-        [field: SerializeField] public int Id { get; set; }
-        [field: SerializeField] public Area Area { get; set; }
+        [JsonProperty] [field: SerializeField] public EngineDef[] Engines { get; private set; }
+        [JsonProperty] [field: SerializeField] public FrozenDef[] Frozen { get; private set; }
+        [JsonProperty] [field: SerializeField] public SpecialDef[] Special { get; private set; }
+        [JsonProperty] [field: SerializeField] public RoadPolyline[] Roads { get; private set; }   // 1 or 2 (one per cave)
 
-        // TODO :: can be used later down the road when the data and game's logic can be segregated even more
-        [field: SerializeField] public SlotOrder SlotOrder { get; set; }
-        [field: SerializeField] public Origin Origin { get; set; }
+        [JsonProperty] [field: SerializeField] public CatType[] CatPool { get; private set; }
+        [JsonProperty] [field: SerializeField] public int StartCoins { get; private set; }
+        [JsonProperty] [field: SerializeField] public int StartPrice { get; private set; }
 
-        // One string per row, first string = top row.
-        // '.' empty, '#' hole, 'G' golden gear, 'I' frozen anchor.
-        [field: SerializeField] public string[] Board { get; set; }
+        [JsonProperty] [field: SerializeField] public int CastleHp { get; private set; }           // 0 = use DefaultCastleHp
+        [JsonProperty] [field: SerializeField] public Wave[] Waves { get; private set; }           // empty = use the default waves
 
-        [field: SerializeField] public EngineDef[] Engines { get; set; }
-        [field: SerializeField] public FrozenDef[] Frozen { get; set; }
-        [field: SerializeField] public SpecialDef[] Special { get; set; }
-        [field: SerializeField] public RoadPolyline[] Roads { get; set; } // 1 or 2 (one per cave)
+        [JsonProperty] [field: SerializeField] public ShopOffer[] ShopPool { get; private set; }
 
-        [field: SerializeField] public CatType[] CatPool { get; set; }
-        [field: SerializeField] public int StartCoins { get; set; }
-        [field: SerializeField] public int StartPrice { get; set; }
+        [JsonProperty] [field: SerializeField] public float Difficulty { get; private set; }       // 0 = derive from Id
 
-        [field: SerializeField] public int CastleHp { get; set; } // if 0, use DefaultCastleHp
+// Cats unlocked by finishing this level. null or empty = none.
+        [JsonProperty] [field: SerializeField] public CatType[] Unlock { get; private set; }
 
-        [field: SerializeField] public Wave[] Waves { get; set; } // exactly WavesPerLevel when !UseDefaultWaves
+        [JsonProperty("UseDefaultWaves")]
+        bool useDefaultWaves;
 
-        [field: SerializeField] public float Difficulty { get; set; } // 0 = derive from Id
-
-        [CanBeNull]
-        [field: SerializeField]
-        public CatType[] UnlockableCats { get; set; } // cats unlocked by finishing this level, or null
-
-        #endregion
-
-        // Derived (not serialized)
-        public int Rows => Board?.Length ?? 0;
-        public int Cols => Rows > 0 ? Board[0].Length : 0;
-
-        // TODO :: (1)
-        public RoadLayout Layout => Cols <= LoopRoadMaxCols ? RoadLayout.Loop : RoadLayout.TopBottom;
-
-        public int EffectiveCastleHp => CastleHp > 0 ? CastleHp : DefaultCastleHp;
-        public float EffectiveDifficulty => Difficulty > 0f ? Difficulty : 1f + 0.08f * (Id - 1);
+        // ---- derived ----
+        [JsonIgnore] public bool UseDefaultWaves => useDefaultWaves || Waves == null || Waves.Length == 0;
+        [JsonIgnore] public int Rows => Board?.Length ?? 0;
+        [JsonIgnore] public int Cols => Rows > 0 ? Board[0].Length : 0;
+        [JsonIgnore] public RoadLayout Layout => Cols <= LoopRoadMaxCols ? RoadLayout.Loop : RoadLayout.TopBottom;
+        [JsonIgnore] public int EffectiveCastleHp => CastleHp > 0 ? CastleHp : DefaultCastleHp;
+        [JsonIgnore] public float EffectiveDifficulty => Difficulty > 0f ? Difficulty : 1f + DifficultyStep * (Id - 1);
     }
 }

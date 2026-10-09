@@ -9,7 +9,7 @@ namespace Game.Core.General.Model
 
         public void Add(GearModel gearModel)
         {
-            
+            gearModelDict[gearModel.GearPosId] = gearModel;
         }
         
         public void Remove(string gearId)

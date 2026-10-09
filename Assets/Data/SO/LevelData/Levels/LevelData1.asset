@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: LevelData1
   m_EditorClassIdentifier: 
   levelConfig:
-    <UseDefaultWaves>k__BackingField: 0
     <Id>k__BackingField: 0
     <Area>k__BackingField: 0
     <SlotOrder>k__BackingField: 0
@@ -28,5 +27,6 @@ MonoBehaviour:
     <StartPrice>k__BackingField: 0
     <CastleHp>k__BackingField: 0
     <Waves>k__BackingField: []
+    <ShopPool>k__BackingField: []
     <Difficulty>k__BackingField: 0
-    <UnlockableCats>k__BackingField: 
+    <Unlock>k__BackingField: 

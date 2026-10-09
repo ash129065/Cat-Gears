@@ -17,7 +17,7 @@ MonoBehaviour:
     sprite: {fileID: 4704680488331250670, guid: ec49d352886c249208f2fcc9fb14e4b6, type: 3}
   - gearType: hole
     sprite: {fileID: -1311278208018227403, guid: 6fcefabf93e574ab896d2b93869ed303, type: 3}
-  - gearType: goldenGear
+  - gearType: engineGear
     sprite: {fileID: 9118850620813342723, guid: 4c3279afc057e45c98876aa8ba3f93de, type: 3}
   - gearType: largerGear
     sprite: {fileID: -2483955897002547636, guid: 998f54a2ba0774a67b14f5a441489c08, type: 3}

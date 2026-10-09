@@ -1,21 +1,19 @@
 using Game.Art;
 using UnityEngine;
 
-// Fits the camera so the painted art always fills the screen width:
-//   orthographicSize = artWidth / (2 * aspect)
+// Fits the camera so the painted art always fills the screen HEIGHT:
+//   orthographicSize = artHeight / 2
+// Screens narrower than the art crop the sides, so the camera follows the lawn horizontally
+// (never showing beyond the art). Screens wider than the art are centred, and the extra width
+// shows beyond the left and right edges (where your blending decoration goes).
 // Use this OR BoardCameraFitter on a level, not both. Both control the same camera.
 namespace Game.Camera
 {
     [RequireComponent(typeof(UnityEngine.Camera))]
     public class ArtCameraFitter : MonoBehaviour
     {
-        public enum VerticalAnchor { Top, Center, Bottom }
-
         [SerializeField] MapArt mapArt;
-        // Used when the screen is taller than the art: this edge of the art is pinned to the screen edge
-        // and the extra height shows beyond the opposite side (where your blending decoration goes).
-        [SerializeField] VerticalAnchor anchor = VerticalAnchor.Top;
-        // Crops this fraction of the art width so a hairline of background never shows at the sides.
+        // Crops this fraction of the art height so a hairline of background never shows at the top or bottom.
         [SerializeField, Range(0f, 0.02f)] float edgeCrop = 0.005f;
 
         UnityEngine.Camera cam;
@@ -39,24 +37,23 @@ namespace Game.Camera
             float aspect = (float)Screen.width / Screen.height;
 
             cam.orthographic = true;
-            cam.orthographicSize = art.size.x * (1f - edgeCrop) / (2f * aspect);
+            cam.orthographicSize = art.size.y * (1f - edgeCrop) / 2f;
 
-            float halfH = cam.orthographicSize;
-            float y;
-            if (halfH * 2f >= art.size.y)
+            float halfW = cam.orthographicSize * aspect;
+            float x;
+            if (halfW * 2f >= art.size.x)
             {
-                // Taller screen: pin one edge of the art, the extra height shows on the other side.
-                y = anchor == VerticalAnchor.Top ? art.max.y - halfH
-                    : anchor == VerticalAnchor.Bottom ? art.min.y + halfH
-                    : art.center.y;
+                // Wider screen: centre the art, the extra width shows on both sides.
+                x = art.center.x;
             }
             else
             {
-                // Shorter screen (tablets): follow the lawn, but never show beyond the art.
-                y = Mathf.Clamp(mapArt.BoardCenter.y, art.min.y + halfH, art.max.y - halfH);
+                // Narrower screen (most portrait phones): follow the lawn, but never show beyond the art.
+                x = Mathf.Clamp(mapArt.BoardCenter.x, art.min.x + halfW, art.max.x - halfW);
             }
 
-            transform.position = new Vector3(art.center.x, y, transform.position.z);
+            // The view height equals the art height, so the camera sits at the art's vertical centre.
+            transform.position = new Vector3(x, art.center.y, transform.position.z);
         }
     }
 }

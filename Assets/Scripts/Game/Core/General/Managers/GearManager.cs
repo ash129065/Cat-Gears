@@ -9,7 +9,7 @@ namespace Game.Core.Managers
 {
     public interface IGearHandler : IInterfaceBase
     {
-        void AddGearData(GearModel gearModel);
+        void UpdateGearData(GearModel gearModel);
         void RemoveGearData(string gearId);
     }
     
@@ -26,7 +26,7 @@ namespace Game.Core.Managers
             BaseInterfaceManager.Instance.RegisterInterfaceInstance<IGearHandler>(this);
         }
 
-        public void AddGearData(GearModel gearModel)
+        public void UpdateGearData(GearModel gearModel)
         {
             GearDataModel.Add(gearModel);
         }
